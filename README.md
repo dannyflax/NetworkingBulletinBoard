@@ -156,4 +156,5 @@ Shows the details of a specific message, given its message_id.
 }
 ```
 *message_id* - ID of the message
+
 *content* - Content of the message
