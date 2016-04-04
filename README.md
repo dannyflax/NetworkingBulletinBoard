@@ -51,7 +51,7 @@ Adds a user to the room if the name provided does not already exist in the room.
 ```
 {
   "usernames": [list of usernames],
-  "message_headers" : [list of message headers],
+  "message_headers" : [list of message header objects],
   "user_id" : user_id
 }
 ```
@@ -60,6 +60,16 @@ Adds a user to the room if the name provided does not already exist in the room.
 *message_headers* - The message header objects of the last two messages in the room. Message Header objects described at the bottom.
 
 *user_id* - The numerical user_id assigned to the new user.
+
+Message header objects are in the following format:
+```
+{
+  "message_id" : message_id,
+  "subject" : subject,
+  "user_id" : user_id,
+  "timestamp" : timestamp
+}
+```
 
 ### Post
 Posts a new message in the room.
@@ -85,25 +95,44 @@ Leaves the room (presence no longer shown in other methods).
 
 **Request:**
 ```
-
+{
+  "user_id" : user_id
+}
 ```
+*user_id* - The ID of the user to leave, as returned by the initial join.
 
-**Response:**
-```
-
-```
+**Response:** No response object
 
 ### Poll
-Shows all new messages and users who have left after a given timestamp
+Shows all new messages and users who have left after a given timestamp. This is meant to be called periodically so as to update the client's display.
 
 **Request:**
 ```
-
+{
+  "timestamp" : timestamp
+}
 ```
+*timestamp* - Timestamp to limit responses by a specific date.
 
 **Response:**
 ```
+{
+  "joins" : [list of user action objects],
+  "leaves" : [list of user action objects],
+  "messages" : [list of message header objects]
+}
+```
 
+*joins* - Descriptions of actions involving users joining the room.
+*leaves* - Descriptions of actions involving users leaving the room.
+*messages* - List of header objects (as described above) for messages that were posted.
+
+User action objects are in the following format:
+```
+{
+  "username" : username,
+  "timestamp" : timestamp
+}
 ```
 
 ### Expand
@@ -111,10 +140,17 @@ Shows the details of a specific message, given its message_id.
 
 **Request:**
 ```
-
+{
+  "message_id" : message_id
+}
 ```
-
+*message_id* - ID of the message to expand
 **Response:**
 ```
-
+{
+  "message_id" : message_id,
+  "content" : content
+}
 ```
+*message_id* - ID of the message
+*content* - Content of the message
