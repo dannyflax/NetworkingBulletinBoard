@@ -61,7 +61,7 @@ Adds a user to the room if the name provided does not already exist in the room.
 
 *user_id* - The numerical user_id assigned to the new user.
 
-Message header objects are in the following format:
+**Message header objects** are in the following format:
 ```
 {
   "message_id" : message_id,
@@ -124,10 +124,12 @@ Shows all new messages and users who have left after a given timestamp. This is 
 ```
 
 *joins* - Descriptions of actions involving users joining the room.
+
 *leaves* - Descriptions of actions involving users leaving the room.
+
 *messages* - List of header objects (as described [above](#join)) for messages that were posted.
 
-User action objects are in the following format:
+**User action objects** are in the following format:
 ```
 {
   "username" : username,
