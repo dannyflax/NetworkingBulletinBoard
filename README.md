@@ -125,7 +125,7 @@ Shows all new messages and users who have left after a given timestamp. This is 
 
 *joins* - Descriptions of actions involving users joining the room.
 *leaves* - Descriptions of actions involving users leaving the room.
-*messages* - List of header objects (as described above) for messages that were posted.
+*messages* - List of header objects (as described [above](#join)) for messages that were posted.
 
 User action objects are in the following format:
 ```
@@ -145,6 +145,7 @@ Shows the details of a specific message, given its message_id.
 }
 ```
 *message_id* - ID of the message to expand
+
 **Response:**
 ```
 {
