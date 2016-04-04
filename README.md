@@ -1,6 +1,6 @@
 # NetworkingBulletinBoard
 
-Project for CSE 3461. Full documentation here, because GitHub has better MD options. All JSON values are in String format, even if they represent numerical values.
+Project for CSE 3461. Full documentation here, because GitHub has better MD options. All JSON values are in String format, even if they represent numerical values. All timestamps are returned in seconds from the [epoch](https://en.wikipedia.org/wiki/Epoch_(reference_date)).
 
 ## Introduction 
 
