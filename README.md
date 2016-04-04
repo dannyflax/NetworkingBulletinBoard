@@ -36,7 +36,7 @@ These are discussed in more detail later.
 
 ## Actions
 A full description of all the actions that the server accepts.
-#### Join
+### Join
 Adds a user to the room if the name provided does not already exist in the room. Returns an error otherwise.
 
 **Request:**
@@ -61,7 +61,7 @@ Adds a user to the room if the name provided does not already exist in the room.
 
 *user_id* - The numerical user_id assigned to the new user.
 
-#### Post
+### Post
 Posts a new message in the room.
 
 **Request:**
@@ -80,7 +80,7 @@ Posts a new message in the room.
 
 **Response:** No response object
 
-#### Leave
+### Leave
 Leaves the room (presence no longer shown in other methods).
 
 **Request:**
@@ -93,7 +93,7 @@ Leaves the room (presence no longer shown in other methods).
 
 ```
 
-#### Poll
+### Poll
 Shows all new messages and users who have left after a given timestamp
 
 **Request:**
@@ -106,7 +106,7 @@ Shows all new messages and users who have left after a given timestamp
 
 ```
 
-#### Expand
+### Expand
 Shows the details of a specific message, given its message_id.
 
 **Request:**
