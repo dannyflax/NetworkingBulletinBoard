@@ -119,7 +119,7 @@ Shows all new messages and users who have left after a given timestamp. This is 
 {
   "joins" : [list of user action objects],
   "leaves" : [list of user action objects],
-  "messages" : [list of message header objects]
+  "message_headers" : [list of message header objects]
 }
 ```
 
@@ -127,7 +127,7 @@ Shows all new messages and users who have left after a given timestamp. This is 
 
 *leaves* - Descriptions of actions involving users leaving the room.
 
-*messages* - List of header objects (as described [above](#join)) for messages that were posted.
+*message_headers* - List of header objects (as described [above](#join)) for messages that were posted.
 
 **User action objects** are in the following format:
 ```
