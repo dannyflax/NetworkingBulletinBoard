@@ -13,11 +13,11 @@ Each API call is encapsulated in the following JSON format:
 }
 ```
 *action_id* - Corresponds with a specific action, each of which listed as follows:
-- 1 = Join
-- 2 = Post
-- 3 = Leave
-- 4 = Poll
-- 5 = Expand
+- 1 = [Join](#join)
+- 2 = [Post](#post)
+- 3 = [Leave](#leave)
+- 4 = [Poll](#poll)
+- 5 = [Expand](#expand)
 
 These are discussed in more detail later.
 
