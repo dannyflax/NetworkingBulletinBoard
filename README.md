@@ -66,7 +66,7 @@ Adds a user to the room if the name provided does not already exist in the room.
 {
   "message_id" : message_id,
   "subject" : subject,
-  "user_id" : user_id,
+  "username" : username,
   "timestamp" : timestamp
 }
 ```
