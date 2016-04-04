@@ -39,7 +39,7 @@ A full description of all the actions that the server accepts.
 #### Join
 Adds a user to the room if the name provided does not already exist in the room. Returns an error otherwise.
 
-Request:
+**Request:**
 ```
 {
   "username" : username
@@ -47,7 +47,7 @@ Request:
 ```
 *username* - The user to add to the room.
 
-Response:
+**Response:**
 ```
 {
   "usernames": [list of usernames],
@@ -64,25 +64,31 @@ Response:
 #### Post
 Posts a new message in the room.
 
-Request:
+**Request:**
 ```
+{
+  "subject" : subject,
+  "content" : content,
+  "user_id" : user_id
+}
+```
+*subject* - Message subject.
 
-```
+*content* - Content of the message.
 
-Response:
-```
+*user_id* - The ID of the poster.
 
-```
+**Response:** No response object
 
 #### Leave
 Leaves the room (presence no longer shown in other methods).
 
-Request:
+**Request:**
 ```
 
 ```
 
-Response:
+**Response:**
 ```
 
 ```
@@ -90,12 +96,12 @@ Response:
 #### Poll
 Shows all new messages and users who have left after a given timestamp
 
-Request:
+**Request:**
 ```
 
 ```
 
-Response:
+**Response:**
 ```
 
 ```
@@ -103,12 +109,12 @@ Response:
 #### Expand
 Shows the details of a specific message, given its message_id.
 
-Request:
+**Request:**
 ```
 
 ```
 
-Response:
+**Response:**
 ```
 
 ```
