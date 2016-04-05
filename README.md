@@ -26,10 +26,13 @@ These are discussed in more detail later.
 #### Response
 ```
 {
+  "action_id" : action_id,
   "successful" : successful,
   "data" : data
 }
 ```
+*action_id* - The associated action_id, for assurances that the correct response was issued.
+
 *successful* - 1 if action was executed successfuly, 0 if not.
 
 *data* - The corresponding response to the action. Only valid if action was successful.
